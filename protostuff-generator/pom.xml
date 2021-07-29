@@ -35,7 +35,30 @@
             <groupId>org.pegdown</groupId>
             <artifactId>pegdown</artifactId>
             <version>1.6.0</version>
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.ow2.asm</groupId>-->
+<!--                    <artifactId>asm</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.ow2.asm</groupId>-->
+<!--                    <artifactId>asm-tree</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.ow2.asm</groupId>-->
+<!--                    <artifactId>asm-analysis</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.ow2.asm</groupId>-->
+<!--                    <artifactId>asm-util</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.ow2.asm</groupId>-->
+<!--            <artifactId>asm</artifactId>-->
+<!--            <version>9.2</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>net.sourceforge.plantuml</groupId>
             <artifactId>plantuml</artifactId>

@@ -18,8 +18,10 @@ import io.protostuff.generator.html.uml.PlantUmlVerbatimSerializer;
 import java.util.HashMap;
 import java.util.Map;
 import org.pegdown.LinkRenderer;
+import org.pegdown.Parser;
 import org.pegdown.PegDownProcessor;
 import org.pegdown.VerbatimSerializer;
+import org.pegdown.plugins.PegDownPlugins;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +43,9 @@ public class PegDownMarkdownProcessor implements MarkdownProcessor {
             | TASKLISTITEMS
             | WIKILINKS;
 
-    private final PegDownProcessor processor = new PegDownProcessor(OPTIONS);
+    private final PegDownProcessor processor = new PegDownProcessor(
+            new Parser(OPTIONS, 2000L, Parser.DefaultParseRunnerProvider, PegDownPlugins.NONE)
+    );
 
     @Override
     public String toHtml(String source) {
